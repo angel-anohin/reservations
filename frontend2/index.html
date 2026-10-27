@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations</title>
+</head>
+<body>
+    <h1 class="title">Make reservation</h1>
+    <div class="container">
+        <input id="name" placeholder="Enter your name"/>
+        <input id="email" placeholder="Enter your e-mail"/>
+        <input id="mobileNumber" placeholder="Enter your mobile number"/>
+        <input type="number" min="1" id="peopleCount" placeholder="For how many people"/>
+        <input type="datetime-local" id="dateTime"/>
+        <textarea id="additionalInfo" placeholder="Enter additional information(smokers or not)"></textarea>
+        <button id="sendReservation" onclick="sendReservation()">Send</button>
+    </div>
+    <p id = "result"></p>
+</body>
+<script src="script.js"></script>
+<link rel="stylesheet" href="styles.css">
+</html>

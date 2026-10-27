@@ -1,0 +1,184 @@
+/* style.css */
+
+/* Основен ресет */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Телото на страницата */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #333;
+}
+
+/* Контейнер */
+.container {
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: #ffffffdd; /* леко прозрачен бял */
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+.chat-bot-container {
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: #ffffffdd; /* леко прозрачен бял */
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease;
+}
+
+.chat-bot-container:hover {
+  transform: translateY(-5px);
+}
+
+.reservation-method-container {
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: #ffffffdd; /* леко прозрачен бял */
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease;
+}
+
+.reservation-method-container:hover {
+  transform: translateY(-5px);
+}
+
+#ai-button {
+  padding: 12px 20px;
+  position: relative;
+  height: 3.5em;
+  border: 3px ridge #149CEA;
+  outline: none;
+  background-color: transparent;
+  color: black;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#ai-button::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+#ai-button::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: linear-gradient(135deg, #6a11cb, #2575fc);
+  transition: 0.5s;
+}
+
+
+#ai-button:hover::before, button:hover::after {
+  transform: scale(0)
+}
+
+#ai-button:hover {
+  box-shadow: inset 0px 0px 25px #1479EA;
+}
+
+
+/* Input полета */
+input, textarea {
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+}
+
+/* Бутон */
+button {
+  padding: 12px 20px;
+  background: #2575fc;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #6a11cb;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Резултатен параграф */
+#result {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 500;
+  color: #000308;
+  min-height: 20px;
+}
+
+
+/* За responsive */
+@media (max-width: 500px) {
+  .container {
+    padding: 30px 20px;
+  }
+  input, button {
+    font-size: 14px;
+  }
+}
